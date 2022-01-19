@@ -1,0 +1,25 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+Main : main()
+Main ..> ValueXDSPAM
+ValueXDSPAM : xdSPAM()
+Main ..> BarGraph
+BarGraph : barGraphConstructor()
+Main ..> Spammer
+Spammer : findSpammer()
+Spammer ..> SenderSpam
+SenderSpam : findSpam()
+Spammer ..> comparsionSpam
+comparsionSpam : compare()
+BarGraph ..> ConstructionGraph
+ConstructionGraph : counstriction()
+BarGraph ..> SenderGraph
+SenderGraph : senderGraph()
+ValueXDSPAM ..> SenderXDSPAM
+SenderXDSPAM : findXDSPAM()
+ConnectURL : connect()
+SenderXDSPAM --> ConnectURL
+Spammer --> ConnectURL
+SenderGraph --> ConnectURL
+@enduml
