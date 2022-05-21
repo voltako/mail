@@ -1,8 +1,8 @@
-FROM openjdk:11
+FROM openjdk:17-alpine
 
 WORKDIR /app
 
-COPY . /app
-RUN javac Main.java
+COPY . .
 
-CMD ["java", "main"]
+RUN  java -jar parsing_mail-1.0-SNAPSHOT.jar
+
